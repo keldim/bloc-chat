@@ -1,6 +1,10 @@
-<h1>Bloc Chat<h1>
-<table>
-    <tr ng-repeat="room in main.rooms">
-        <td>{{ room }}</td>
-    </tr>
-</table>
+<div class="sidebar">
+    <h1>Bloc Chat</h1>
+        <table>
+        <tr ng-repeat="room in main.rooms">
+            <td class="transparency">{{ room.$value }}</td>
+        </tr>
+        </table>       
+</div>
+
+            

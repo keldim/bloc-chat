@@ -1,0 +1,13 @@
+.sidebar {
+    background-color:lightgray;
+    float: left;
+    height: 100%;
+    position: absolute;
+    padding-left: 20px;
+    padding-right: 100px;
+}
+
+.sidebar .transparency {
+    opacity: 0.3;
+    padding-bottom: 20px;
+}
