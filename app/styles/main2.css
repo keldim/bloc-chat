@@ -4,10 +4,25 @@
     height: 100%;
     position: absolute;
     padding-left: 20px;
-    padding-right: 100px;
+    width: 300px;
+    
 }
 
 .sidebar .transparency {
     opacity: 0.3;
     padding-bottom: 20px;
+}
+
+.sidebar div {
+    float: left;
+    clear: none;
+}
+
+.sidebar .createbutton {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.sidebar table {
+    margin-top: 80px;
 }
