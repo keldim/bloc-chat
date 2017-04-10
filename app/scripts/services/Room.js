@@ -2,14 +2,19 @@
   function Room($firebaseArray, $uibModal) {
     var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
-    var createnewroom = function () {
-        rooms.$add(typedvalue);
+    var createnewroom = function (value) {
+        rooms.$add(value);
     };
+    
     var openmodal = function () {
-      $uibModal.open({
+      var modalInstance = $uibModal.open({
           templateUrl: '/templates/newroom.html',
-          controller: function () {
+          controller: function ($scope) {
               console.log("loaded");
+              $scope.createRoom = createnewroom;
+              $scope.dismissRoom = function () {
+                    modalInstance.dismiss();
+              };  
           }
       })   
     };
