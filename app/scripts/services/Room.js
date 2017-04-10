@@ -1,22 +1,27 @@
 (function() {
-  function Room($firebaseArray, $document) {
+  function Room($firebaseArray, $uibModal) {
     var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
     var createnewroom = function () {
-        var typedvalue = $document.getElementById('addvalue').value;
-        rooms.$add({ (rooms.length + 1) : typedvalue })
+        rooms.$add(typedvalue);
     };
     var openmodal = function () {
-      $uibModal.open({template: newroom.html, controller: NewroomCtrl.js})   
+      $uibModal.open({
+          templateUrl: '/templates/newroom.html',
+          controller: function () {
+              console.log("loaded");
+          }
+      })   
     };
-    var typedvalue = $document.getElementById('addvalue').value;
-      
+   
     return {
-      all: rooms
+        all: rooms,
+        openmodal: openmodal,
+        createnewroom: createnewroom
     };
   }
 
   angular
     .module('blocChat')
-    .factory('Room', ['$firebaseArray', '$document', Room]);
+    .factory('Room', ['$firebaseArray', '$uibModal', Room]);
 })();

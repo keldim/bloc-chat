@@ -3,9 +3,14 @@
         <h1>Bloc Chat</h1>
     </div>
     <div>
-        <form class="createbutton" ng-submit="main.roomConnect.openModal">
-            <input type="submit" value="New room">
-        </form>
+    
+        <div class="createbutton" ng-click="main.roomConnect.openmodal()">
+            <form>
+                <input type="submit" value="New room">
+            </form>
+        </div>
+    
+
     </div>   
     <table>
         <tr ng-repeat="room in main.rooms">

@@ -1,9 +1,14 @@
-<div class="newroomwindow">
-    <h1>Create new room</h1>
-    <form ng-submit="main.newroom">    
-    <label>Enter a room name</label>
-    <input type="text" id="addvalue">
-    <input type="submit" value="Cancel">
-    <input type="submit" value="Create room">
-    </form>
-</div>
+
+
+      <div class="modal-body">
+            <h1>Create new room</h1>
+            <form>    
+            <label>Enter a room name</label>
+            <input type="text" id="addvalue" ng-model="typedvalue">
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-secondary" ng-click="main.roomConnect.createnewroom()">Create room</button>
+      </div>
+    
