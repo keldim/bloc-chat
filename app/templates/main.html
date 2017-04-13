@@ -14,9 +14,15 @@
     </div>   
     <table>
         <tr ng-repeat="room in main.rooms">
-            <td class="transparency">{{ room.$value }}</td>
+            <td class="transparency" ng-click="main.active={{ room.$value }}">{{ room.$value }}</td>
         </tr>
     </table>       
 </div>
 
-            
+<div>           
+    <table>
+        <tr ng-repeat="message in main.messages.getByRoomId(main.active)">
+            <td>{{ message }}</td>
+        </tr>
+    </table>       
+</div> 
