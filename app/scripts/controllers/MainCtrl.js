@@ -3,7 +3,22 @@
          this.rooms = Room.all;
          this.roomConnect = Room;
          this.messages = Message;
-         this.active = null;
+        
+         
+         this.selectRoom = function(roomId) {
+            console.log('Selcted Room: '+roomId);
+            console.log(this.rooms);
+            //get the room messages
+            // set this to a var main.messages.getByRoomId(main.active)
+            this.roomMessages = Message.getByRoomId(roomId);
+           
+             for (var i=0; i < this.rooms.length; i++) {
+                console.log(this.rooms[i]);
+                if(this.rooms[i].$id === roomId) { 
+                    this.roomTitle = this.rooms[i].$value;
+                }
+             }
+         }
      }
  
      angular

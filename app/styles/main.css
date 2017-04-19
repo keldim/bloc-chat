@@ -26,3 +26,12 @@
 .sidebar table {
     margin-top: 80px;
 }
+
+li p {
+    margin-left: 20%;
+}
+
+.chatTitle {
+    margin-left: 20%;
+    margin-bottom: 30px;
+}
