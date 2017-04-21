@@ -29,3 +29,13 @@
         </li>
     </ul>       
 </div> 
+
+
+<div class="col-lg-6 bottom">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Write your message here..." ng-model="contentString">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="main.newMessage(contentString, main.currentRoomId)">Send</button>
+      </span>
+    </div>
+  </div>
