@@ -19,7 +19,7 @@
                 }
              }
          }
-         this.newMessage = Message.send();
+         this.newMessage = Message.send;
      }
  
      angular
