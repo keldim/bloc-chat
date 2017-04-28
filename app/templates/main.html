@@ -5,9 +5,7 @@
     <div>
     
         <div class="createbutton" ng-click="main.roomConnect.openmodal()">
-            <form>
-                <input type="submit" value="New room">
-            </form>
+            <button type="button" class="btn btn-default">New room</button>
         </div>
     
 
@@ -19,21 +17,27 @@
     </table>       
 </div>
 
-<div>           
+
+<div class="chatTitle">{{ main.roomTitle }}</div>
+<div class="messageArea">           
+    
     
     <ul>
-        <li class="chatTitle">{{ main.roomTitle }}</li>
-        <li ng-repeat="message in main.roomMessages">
-            <p>{{message.username}} — {{message.sentAt}}</p>
+        
+        
+        
+        <li style="padding: 10px;" ng-repeat="message in main.roomMessages">
+            <p style="font-size: 20px;">{{message.username}}-{{message.sentAt}}</p>
             <p>{{message.content}}</p>
         </li>
+           
     </ul>       
 </div> 
 
 
-<div class="col-lg-6 bottom">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Write your message here..." ng-model="contentString">
+<div class="bottom">
+    <div class="input-group input-group-lg">
+      <input type="text" class="form-control" placeholder="Write your message here..." ng-model="contentString" ng-keyup="$event.keyCode == 13 && main.newMessage(contentString, main.currentRoomId)">
       <span class="input-group-btn">
         <button class="btn btn-default" type="button" ng-click="main.newMessage(contentString, main.currentRoomId)">Send</button>
       </span>

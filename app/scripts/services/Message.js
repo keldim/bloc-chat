@@ -12,7 +12,8 @@
         send: function(newMessage, identity) {
         // Send method logic
             console.log("working!");
-         $firebaseArray(ref).$add({content: newMessage, roomId: identity, username: $cookies.get('blocChatCurrentUser')});   
+         $firebaseArray(ref).$add({content: newMessage, roomId: identity, username: $cookies.get('blocChatCurrentUser')});
+            $('input:text').val('');
       }
         }
       

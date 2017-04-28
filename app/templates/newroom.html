@@ -3,12 +3,12 @@
       <div class="modal-body">
             <h1>Create new room</h1>
             <form>    
-            <label>Enter a room name</label>
-            <input type="text" id="addvalue" ng-model="typedvalue">
+            <label>Enter a room name:</label>
+            <input type="text" id="addvalue" ng-model="typedvalue" class="form-control">
             </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="dismissRoom()">Cancel</button>
-        <button type="button" class="btn btn-secondary" ng-click="createRoom(typedvalue)">Create room</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="dismissRoom()">Cancel</button>
+        <button type="button" class="btn btn-success" ng-click="createRoom(typedvalue)">Create room</button>
       </div>
     

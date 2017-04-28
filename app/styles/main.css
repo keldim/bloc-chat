@@ -27,16 +27,53 @@
     margin-top: 80px;
 }
 
-li p {
-    margin-left: 20%;
+
+ui-view {
+    display: block;
+    overflow: hidden;
+}
+
+
+ul {
+    list-style: none;
+    margin-left: 300px;
+    padding-left: 0;
+    
+}
+
+li:nth-child(odd) {
+    background-color:azure;
 }
 
 .chatTitle {
-    margin-left: 20%;
-    margin-bottom: 30px;
+    margin-left: 300px;
+    font-size: 26px;
+    position: absolute;
+    width: 100%;
+    background: #f9f9f9;
+    padding-left: 10px;
+    border-bottom: 1px solid;
+    border-color: #f2f2f2;
+    
 }
 
 .bottom {
-    margin-left: 500px;
-    margin-top: 400px;
+    margin-left: 300px;
+    bottom: 0;
+    position: fixed;
+    
+}
+
+td:hover {
+   cursor: pointer; 
+}
+
+body {
+    overflow: hidden;
+}
+
+.messageArea {
+    
+    overflow-y: auto;
+    margin-top: 38px;
 }

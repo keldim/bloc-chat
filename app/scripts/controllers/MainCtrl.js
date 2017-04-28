@@ -11,6 +11,9 @@
             this.currentRoomId = roomId;
             this.roomMessages = Message.getByRoomId(roomId);
              
+             
+            
+             
            
              for (var i=0; i < this.rooms.length; i++) {
                 console.log(this.rooms[i]);
